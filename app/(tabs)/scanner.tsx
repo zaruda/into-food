@@ -2,11 +2,9 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import { StyleSheet } from "react-native";
 
 import ParallaxScrollView from "@/components/ParallaxScrollView";
-import { ThemedText } from "@/components/ThemedText";
-import { ThemedView } from "@/components/ThemedView";
-import { IntoleranceList } from "@/components/IntoleranceList";
+import { Camera } from "@/components/Camera";
 
-export default function ProfileScreen() {
+export default function ScannerScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: "#D0D0D0", dark: "#353636" }}
@@ -14,11 +12,7 @@ export default function ProfileScreen() {
         <Ionicons size={310} name="code-slash" style={styles.headerImage} />
       }
     >
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Profile</ThemedText>
-      </ThemedView>
-      <ThemedText>Select your intolerance</ThemedText>
-      <IntoleranceList />
+      <Camera />
     </ParallaxScrollView>
   );
 }
